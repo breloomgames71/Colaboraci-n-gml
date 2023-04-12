@@ -1,0 +1,37 @@
+create 
+coldown = 0;
+persona = 1;
+
+
+personaje[0] = 40;
+personaje[1] = 60;
+
+step
+if mb and coldown <= 0{
+	dispara bala
+coldown = 100;
+}
+
+
+if coldown > 0{
+	coldown--;
+}
+
+
+
+if w and !instance_place(x,y-1,obj_colision){
+	y--;
+} 
+if instance_place(x,y,obj_pinchos) and inmunidad = 0{
+	vida--;
+	inmunidad = personaje[persona];
+}
+
+
+if inmunidad > 0{
+	inmunidad--;
+}
+
+
+
+
