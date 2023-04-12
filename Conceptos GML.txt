@@ -2,3 +2,34 @@ CREATE: Se ejecuta solo al crearse el objeto y no se vuelve a ejecutar mas , se 
 STEP O PASOS: Se ejecuta en cada frame del juego y es importante.
 DRAW: Dibuja en la capa del jugador, como sprites o textos que le vayan a seguir normalmente.
 DRAW GUI: Dibuja en la capa de la camara y esto siempre estara por encima de los objetos.
+
+
+Codigo:
+
+instance_place(x,y,obj);
+Esta funcion indica una colision con un objeto desde que posicion , es recomendado poner para un enemigo el x e y de nuestro
+objeto, en el caso de una colision de una pared puede funcionar aunque se puede mejorar.
+El objeto que nos pide es con el que si colisiona.
+Suele ir asi:
+if instance_place(x,y,obj_enemy){
+	vida--;
+}
+
+move_towards_point(x,y,speed);
+Esta funcion hace que un objeto vaya hacia la posicion de un objeto o coordenadas a una velocidad que le 
+asignemos.
+
+//Funciones para sprites e imagenes
+image_speed = 0.22; Esta funcion asigna la velocidad de animacion del sprite.
+image_blend = c_red; Esta funcion le asigna un color al objeto.
+image_index = 1; Esta funcion le asigna al sprite con animacion que posicion de frame queremos que se vea.
+sprite_index = spr_player; Esta funcion asigna el sprite al objeto.
+
+//Draw
+draw_text(x,y,text) esta funcion dibuja un texto pero si queremos que se vea una variable dentro debemos ponerla asi string(text)
+draw_set_color(c_red) asigna el color del draw.
+draw_set_font(fnt_letra) Asigna la fuente a los textos
+draw_set_alpha(0.9) asigna la transparencia del alpha(Siempre que se ponga , donde ya no querramos el alpha SIEMPRE ponemos al terminar 
+draw_set_aplha(1))
+draw_set_circle(x,y,r)
+draw_set_rectangle(x,y,x2,y2,outline);
