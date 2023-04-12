@@ -1,0 +1,4 @@
+CREATE: Se ejecuta solo al crearse el objeto y no se vuelve a ejecutar mas , se suele usar mas para crear las variables del objeto.
+STEP O PASOS: Se ejecuta en cada frame del juego y es importante.
+DRAW: Dibuja en la capa del jugador, como sprites o textos que le vayan a seguir normalmente.
+DRAW GUI: Dibuja en la capa de la camara y esto siempre estara por encima de los objetos.
